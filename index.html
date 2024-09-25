@@ -1,35 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Pengaduan Layanan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h2>Form Pengaduan Layanan BPS Kabupaten Brebes</h2>
-    <p>Anda tidak perlu khawatir, kami akan melindungi data diri Anda sesuai peraturan yang berlaku</p>
+    <div class="form-container">
+        <h2>Form Pengaduan Layanan BPS Provinsi Jawa Tengah</h2>
+        <p>Anda tidak perlu khawatir, kami akan melindungi data diri Anda sesuai peraturan yang berlaku</p>
 
-    <form id="pengaduanForm">
-        <label for="nama">Nama:</label><br>
-        <input type="text" id="nama" name="nama" required><br><br>
+        <form id="pengaduanForm">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama" required>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
 
-        <label for="nomorhp">Nomor HP:</label><br>
-        <input type="text" id="nomorhp" name="nomorhp" required><br><br>
+            <label for="nomorhp">Nomor HP:</label>
+            <input type="tel" id="nomorhp" name="nomorhp" placeholder="Nomor HP" required>
 
-        <label for="jenis_pengaduan">Jenis Pengaduan:</label><br>
-        <select id="jenis_pengaduan" name="jenis_pengaduan" required>
-            <option value="Layanan PST">Layanan PST</option>
-            <option value="Layanan Lain">Layanan Lain</option>
-        </select><br><br>
+            <label for="jenis_pengaduan">Jenis Pengaduan:</label>
+            <select id="jenis_pengaduan" name="jenis_pengaduan" required>
+                <option value="Layanan PST">Layanan PST</option>
+                <option value="Layanan Lain">Layanan Lain</option>
+            </select>
 
-        <label for="isi_pengaduan">Isi Pengaduan:</label><br>
-        <textarea id="isi_pengaduan" name="isi_pengaduan" rows="4" cols="50" required></textarea><br><br>
+            <label for="isi_pengaduan">Isi Pengaduan:</label>
+            <textarea id="isi_pengaduan" name="isi_pengaduan" rows="5" placeholder="Isi Pengaduan" required></textarea>
 
-        <button type="submit">Submit</button>
-    </form>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
     <script src="script.js"></script>
 </body>
